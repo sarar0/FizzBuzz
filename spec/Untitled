@@ -1,0 +1,18 @@
+
+def time_two(num)
+   num * 2
+ end
+
+
+
+ class Integer
+
+   def time_two(num)
+      num*2
+    end
+  end
+
+
+
+
+3.time_two
