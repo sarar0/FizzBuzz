@@ -6,7 +6,7 @@ describe 'fizzbuzz' do
   arg_int = 1
     100.times do
       if arg_int % 3 == 0 && arg_int % 5 == 0
-         expect(fizzbuzz(arg_int)).to eq "fizzbuzz"
+         expect(arg_int.fizzbuzz).to eq "fizzbuzz"
       end
       arg_int += 1
     end
@@ -16,7 +16,7 @@ describe 'fizzbuzz' do
   arg_int = 1
     100.times do
       if arg_int % 3 == 0 && arg_int % 5 != 0
-         expect(fizzbuzz(arg_int)).to eq "fizz"
+         expect(arg_int.fizzbuzz).to eq "fizz"
       end
       arg_int += 1
     end
@@ -26,7 +26,7 @@ describe 'fizzbuzz' do
   arg_int = 1
     100.times do
       if arg_int % 3 != 0 && arg_int % 5 == 0
-         expect(fizzbuzz(arg_int)).to eq "buzz"
+         expect(arg_int.fizzbuzz).to eq "buzz"
        end
       arg_int += 1
     end
@@ -36,7 +36,7 @@ describe 'fizzbuzz' do
     arg_int = 1
       100.times do
         if arg_int % 3 != 0 && arg_int % 5 != 0
-           expect(fizzbuzz(arg_int)).to eq arg_int
+           expect(arg_int.fizzbuzz).to eq arg_int
         end
         arg_int += 1
       end
