@@ -1,44 +1,24 @@
-
-require 'fizzbuzz'
-
+require './lib/fizzbuzz.rb'
 describe 'fizzbuzz' do
-  it 'return "fizzbuzz" when passed multiples of 3 and 5' do
-  arg_int = 1
-    100.times do
-      if arg_int % 3 == 0 && arg_int % 5 == 0
-         expect(arg_int.fizzbuzz).to eq "fizzbuzz"
-      end
-      arg_int += 1
-    end
-  end
-
-  it 'return "fizz" when passed multiples of 3' do
-  arg_int = 1
-    100.times do
-      if arg_int % 3 == 0 && arg_int % 5 != 0
-         expect(arg_int.fizzbuzz).to eq "fizz"
-      end
-      arg_int += 1
-    end
-  end
-
-  it 'return "buzz" when passed multiples of 5' do
-  arg_int = 1
-    100.times do
-      if arg_int % 3 != 0 && arg_int % 5 == 0
-         expect(arg_int.fizzbuzz).to eq "buzz"
-       end
-      arg_int += 1
-    end
-  end
-
-    it 'return number otherwise' do
-    arg_int = 1
-      100.times do
-        if arg_int % 3 != 0 && arg_int % 5 != 0
-           expect(arg_int.fizzbuzz).to eq arg_int
-        end
-        arg_int += 1
-      end
-     end
+ it "returns 'fizz' when passed 3" do
+   expect(3.fizzbuzz).to eq 'fizz'
+ end
+ it "returns 'fizz' when passed 6" do
+   expect(6.fizzbuzz).to eq 'fizz'
+ end
+ it "returns 'buzz' when passed 5" do
+   expect(5.fizzbuzz).to eq 'buzz'
+ end
+ it "returns 'buzz' when passed 10" do
+   expect(10.fizzbuzz).to eq 'buzz'
+ end
+ it "returns 'fizzbuzz' when passed 15" do
+   expect(15.fizzbuzz).to eq 'fizzbuzz'
+ end
+ it "returns 'fizzbuzz' when passed 30" do
+   expect(30.fizzbuzz).to eq 'fizzbuzz'
+ end
+ it "returns itself if not a multiple of 5 or 3" do
+   expect(2.fizzbuzz).to eq 2
+ end
 end
